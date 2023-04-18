@@ -1,0 +1,11 @@
+# Selecciona una imagen de Python con la versión que necesitas
+FROM python:3.9-slim-buster
+
+# Copia los archivos necesarios a la imagen
+COPY ./src/app.py ./
+
+# Instala las dependencias necesarias
+RUN pip install
+
+# Ejecuta el programa cuando el contenedor se inicie
+CMD ["python", "app.py"]
